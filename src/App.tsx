@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import "./style/common.css";
+import "./style/miui.css";
 import LoginPage from './components/login'
 import { ThemeProvider } from 'styled-components'
 import { Bounce, ToastContainer } from 'react-toastify'
-import { Container, createTheme, CssBaseline } from '@mui/material'
+import { createTheme, CssBaseline } from '@mui/material'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { SessionExpired } from './base'
+
+
 
 type AppRoute = {
   path: string;
@@ -28,66 +31,78 @@ function App() {
 
   const theme = createTheme({
     typography: {
-      fontFamily: `'Poppins', sans-serif`,
+      fontFamily: `Raleway, sans-serif`,
     },
-    // components: {
-    //   MuiCheckbox: {
-    //     styleOverrides: {
-    //       root: {
-    //         color: "#00A79D !important", // unchecked border color
-    //         "&.Mui-checked": {
-    //           color: "#00A79D !important", // checked color
-    //         },
-    //       },
-    //     },
-    //   },
-    //   MuiOutlinedInput: {
-    //     styleOverrides: {
-    //       root: {
-    //         "&:hover .MuiOutlinedInput-notchedOutline": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //         "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //       },
-    //     },
-    //   },
-    //   MuiSelect: {
-    //     styleOverrides: {
-    //       outlined: {
-    //         "&:hover": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //         "&.Mui-focused": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //       },
-    //     },
-    //   },
-    //   MuiInputBase: {
-    //     styleOverrides: {
-    //       root: {
-    //         "&:hover fieldset": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //         "&.Mui-focused fieldset": {
-    //           borderColor: "#00A79D !important",
-    //         },
-    //         "& textarea::placeholder": {
-    //           color: "#5E616A",
-    //           opacity: 1,
-    //         },
-    //       },
-    //       input: {
-    //         "::placeholder": {
-    //           color: "#5E616A",
-    //           opacity: 1,
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
+    components: {
+      MuiInputBase: {
+        styleOverrides: {
+          root: {
+          },
+          input: {
+            color: "#fff",
+          },
+          // notchedOutline: {
+          //   borderColor: "#00FF7D",
+          // },
+        },
+      },
+      MuiCheckbox: {
+        styleOverrides: {
+          root: {
+            color: "#0065FF !important", // unchecked border color
+            "&.Mui-checked": {
+              color: "#0065FF !important", // checked color
+            },
+          },
+        },
+      },
+      //   MuiOutlinedInput: {
+      //     styleOverrides: {
+      //       root: {
+      //         "&:hover .MuiOutlinedInput-notchedOutline": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //         "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //       },
+      //     },
+      //   },
+      //   MuiSelect: {
+      //     styleOverrides: {
+      //       outlined: {
+      //         "&:hover": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //         "&.Mui-focused": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //       },
+      //     },
+      //   },
+      //   MuiInputBase: {
+      //     styleOverrides: {
+      //       root: {
+      //         "&:hover fieldset": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //         "&.Mui-focused fieldset": {
+      //           borderColor: "#00A79D !important",
+      //         },
+      //         "& textarea::placeholder": {
+      //           color: "#5E616A",
+      //           opacity: 1,
+      //         },
+      //       },
+      //       input: {
+      //         "::placeholder": {
+      //           color: "#5E616A",
+      //           opacity: 1,
+      //         },
+      //       },
+      //     },
+      //   },
+    },
   });
 
   const appRoutes: AppRoute[] = [

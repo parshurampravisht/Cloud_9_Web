@@ -20,7 +20,8 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { Form, Formik } from "formik";
 import { useAppDispatch } from "../../hook/hook";
 import { loginFormValidationSchema } from "../../utils/loginFormSchema";
-import "../../style/login.css"
+import "../../style/login.ts"
+import { StyledLoginWrapper } from "../../style/login";
 // import { loginFormValidationSchema } from "../../utils/loginFormSchema";
 
 const fieldMap = {
@@ -122,6 +123,8 @@ function LoginPage() {
 
     const submitHandler = async (values: any) => {
 
+        console.log("values", values)
+
         //     try {
         //         const res: any =
         //             await dispatch(saveLoginDetails({ source: "web_app", email: values.email, password: values.password }))
@@ -164,9 +167,11 @@ function LoginPage() {
     }
 
     return (
-        <div className="linear-gradient-container flex-row align-center justify-center height-100vh">
+        <StyledLoginWrapper
+            linearGradientImagePath="/images/bg-linear-gradient.png"
+            className="flex-row align-center justify-center height-100vh">
             <div className="flex-row align-center justify-center width-100 height-100">
-                <div className="flex-row align-center justify-center width-100 height-100">
+                <div className="flex-row align-center justify-center width-100 height-100 z-index-99">
                     <Formik
                         initialValues={formData}
                         enableReinitialize={true}
@@ -175,14 +180,17 @@ function LoginPage() {
                     >
                         {({ values, handleChange, handleSubmit, touched, errors }) => {
                             return (
-                                <Form onSubmit={handleSubmit}>
+                                <Form className="login-form flex-col" onSubmit={handleSubmit}>
+                                    <Stack direction={"column"} className="flex-col align-center justify-center width-100 row-gap-10">
+                                        <Typography variant="h4" className="font-medim-14 text-white-color text-align-left">Welcome to Cloud 9</Typography>
+                                        <Typography variant="caption" className="font-medium-14 text-white-color text-align-center">Stay Connected by signing in with your email and password to <br /> access your account.</Typography>
+                                    </Stack>
+
                                     <Grid container spacing={1}>
-                                        <Grid item xs={12} >
-                                            <Typography variant="caption" className="font-medium-14">Email*</Typography>
-                                        </Grid>
+                                        <Typography variant="caption" className="font-medium-14 text-white-color text-align-left">Email address*</Typography>
                                         <Grid item xs={12} style={{ height: "47px", marginBottom: "10px" }}>
                                             <TextField
-                                                className="username"
+                                                className="username input-field"
                                                 variant="outlined"
                                                 size="small"
                                                 value={values.email}
@@ -204,12 +212,12 @@ function LoginPage() {
                                                 helperText={touched.email && errors.email}
                                             />
                                         </Grid>
-                                        <Grid item xs={12} >
-                                            <Typography variant="caption" className="font-medium-14">Password*</Typography>
+                                        <Grid xs={12} className="flex-row align-left">
+                                            <Typography variant="caption" className="font-medium-14 text-white-color text-align-left">Password*</Typography>
                                         </Grid>
-                                        <Grid item xs={12} style={{ height: "47px", marginBottom: "10px" }}>
+                                        <Grid xs={12} style={{ height: "47px", marginBottom: "10px" }}>
                                             <TextField
-                                                className="password"
+                                                className="password input-field"
                                                 type={password ? "text" : "password"}
                                                 variant="outlined"
                                                 size="small"
@@ -249,16 +257,16 @@ function LoginPage() {
                                                 }}
                                             />
                                         </Grid>
-                                        <Stack direction={"row"} className="flex-row align-center justify-between width-100 switch-wrapper">
+                                        <Stack direction={"row"} className="remember-me-wrapper flex-row align-center justify-between width-100 switch-wrapper text-white-color font-weight-600 font-small-12">
                                             <FormControlLabel sx={{
                                                 '& .MuiSwitch-switchBase.Mui-checked': {
-                                                    color: '#1CA49D',
+                                                    color: '#0065FF',
                                                     '&:hover': {
                                                         backgroundColor: 'rgba(28, 164, 157, 0.08)',
                                                     },
                                                 },
                                                 '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-                                                    backgroundColor: '#1CA49D',
+                                                    backgroundColor: '#0065FF',
                                                 },
                                             }}
 
@@ -273,18 +281,14 @@ function LoginPage() {
                                                 Forgot password?{" "}
                                             </p>
                                         </Stack>
-                                        <Grid item xs={12}>
-                                            <Button
-                                                className="height-44px btn-border-0"
-                                                variant="contained"
-                                                type="submit"
-                                                fullWidth
-                                                style={{ background: "#1CA49D" }}
-                                            // onClick={submitHandler}
-                                            >
-                                                Sign In
-                                            </Button>
-                                        </Grid>
+                                        <Button
+                                            className="submit-button height-44px btn-border-0 primary-bg-color text-transform-capitalize border-radius-25px font-weight-600"
+                                            variant="contained"
+                                            type="submit"
+                                            fullWidth
+                                        >
+                                            Sign In
+                                        </Button>
                                     </Grid>
                                 </Form>
                             )
@@ -478,7 +482,7 @@ function LoginPage() {
                         />
                     )} */}
             </div>
-        </div>
+        </StyledLoginWrapper>
     );
 };
 
