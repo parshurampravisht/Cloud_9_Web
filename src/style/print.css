@@ -1,0 +1,74 @@
+/* styles/globals.css or index.css */
+
+@media print {
+    body {
+        font-size: 14px;
+        color: #ffffff !important;
+        width: 100%;
+    }
+
+    @page {
+        margin: 2mm;
+    }
+
+    .print-container {
+        padding: 10mm;
+        background: linear-gradient(120deg, rgba(3, 65, 76, 1) 45%, rgba(94, 122, 49, 1) 70%, rgba(108, 133, 46, 1) 100%) !important;
+    }
+
+    .print-font-size-16 {
+        font-size: 16px !important;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+
+    .print-wrapper {
+        padding: 20px;
+        background: white;
+    }
+
+    .print-detail-value {
+        font-size: 13px !important;
+        margin-bottom: 15px;
+    }
+
+    .allocation-percent-chart {
+        margin-bottom: 20px;
+    }
+
+    .chart-wrapper>div {
+        width: 50% !important;
+        max-width: 50% !important;
+        /* margin-right: 0% !important; */
+    }
+
+    .widget-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block;
+        margin-right: 20% !important;
+    }
+
+    .investor-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 500px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .widgetTxt {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .headerTable {
+        margin-top: 20px !important;
+    }
+
+    .margin-bottom-20 {
+        margin-bottom: 20px !important;
+    }
+
+}

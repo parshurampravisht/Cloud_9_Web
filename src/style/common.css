@@ -1,0 +1,207 @@
+.linear-gradient-color {
+  background: linear-gradient(209.72deg, rgba(18, 18, 18, 0) 38.97%, #162D2E 52.32%, #1A4D50 67.77%, #00FF7D 84.49%),
+    linear-gradient(150.49deg, rgba(0, 0, 0, 0) 17.59%, #0066FF 101.95%);
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-left {
+  justify-content: left;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.width-100 {
+  width: 100% !important;
+}
+
+.height-100 {
+  height: 100%;
+}
+
+.height-100vh {
+  height: 100vh;
+}
+
+.width-fit-content {
+  width: fit-content;
+}
+
+.column-gap-10 {
+  column-gap: 10px;
+}
+
+.column-gap-4 {
+  column-gap: 4px;
+}
+
+.row-gap-10 {
+  row-gap: 10px;
+}
+
+.row-gap-5 {
+  row-gap: 5px;
+}
+
+.row-gap-20 {
+  row-gap: 20px;
+}
+
+.overflow-x-hidden {
+  overflow-x: auto;
+}
+
+.column-gap-5 {
+  column-gap: 5px;
+}
+
+.column-gap-3 {
+  column-gap: 3px;
+}
+
+.row-gap-3 {
+  row-gap: 3px;
+}
+
+.border-1px-solid {
+  border: 1px solid !important;
+}
+
+.border-1-5px-solid {
+  border: 1.5px solid !important;
+}
+
+.border-2px-solid {
+  border: 2px solid !important;
+}
+
+.border-radius-50 {
+  border-radius: 50%;
+}
+
+.border-radius-8px {
+  border-radius: 8px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-disable {
+  cursor: not-allowed;
+}
+
+.primary-E7FF20-color {
+  color: #e7ff20 !important;
+}
+
+.primary-E7FF20-bg-color {
+  background-color: #e7ff20 !important;
+}
+
+.primary-E7FF20-border-color {
+  border-color: #e7ff20 !important;
+}
+
+.text-transform-capitalize {
+  text-transform: capitalize !important;
+}
+
+.background-transparent {
+  background: transparent !important;
+}
+
+.text-white-color {
+  color: #ffffff;
+}
+
+.font-weight-500 {
+  font-weight: 500 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.font-small-12 {
+  font-size: 12px !important;
+}
+
+.font-medium-14 {
+  font-size: 14px !important;
+}
+
+.speedo path.needle {
+  stroke-width: 4;
+  /* customize needle thickness */
+}
