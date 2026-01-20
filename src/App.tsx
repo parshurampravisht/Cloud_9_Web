@@ -8,6 +8,8 @@ import { Bounce, ToastContainer } from 'react-toastify'
 import { createTheme, CssBaseline } from '@mui/material'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { SessionExpired } from './base'
+import Dashboard from './components/Dashboard';
+import Layout from './components/layout';
 
 
 
@@ -106,11 +108,11 @@ function App() {
   });
 
   const appRoutes: AppRoute[] = [
-    // {
-    //   path: "/",
-    //   component: Dashboard,
-    //   authType: "POST",
-    // },
+    {
+      path: "/dashboard",
+      component: Dashboard,
+      authType: "POST",
+    },
     // { path: "/service-user", component: ServiceUsers, authType: "POST" },
     // {
     //   path: "/service-user/individual-user-details/:authId",
@@ -230,9 +232,9 @@ function App() {
           setSessionExpired(true);
         }
         return (
-          // <Layout {...props}>
-          <Component {...props} />
-          // </Layout>
+          <Layout {...props}>
+            <Component {...props} />
+          </Layout>
         );
       }
     }

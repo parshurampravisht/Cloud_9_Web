@@ -20,18 +20,9 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { Form, Formik } from "formik";
 import { useAppDispatch } from "../../hook/hook";
 import { loginFormValidationSchema } from "../../utils/loginFormSchema";
-import "../../style/login.ts"
-import { StyledLoginWrapper } from "../../style/login";
-// import { loginFormValidationSchema } from "../../utils/loginFormSchema";
-
-const fieldMap = {
-    email: [{ name: "email", label: "Email", type: "email", placeholder: `Enter your email` }],
-    otp: [{ name: "otp", label: "", type: "text", placeholder: `Enter email OTP` }],
-    password: [
-        { name: "password", label: "Password", type: "password", placeholder: `Enter your password` },
-        { name: "confirm", label: "Confirm Password", type: "password", placeholder: `Confirm your password` },
-    ],
-};
+import "./style.ts"
+import { StyledLoginWrapper } from "./style.ts";
+import { pageNavigatePathRoutes } from "../../constant/index.ts";
 
 function LoginPage() {
     const navigate = useNavigate();
@@ -121,9 +112,16 @@ function LoginPage() {
         //     }
     }, []);
 
+
+    const navigateHandler = (category: string) => {
+        navigate(category)
+    }
+
+
     const submitHandler = async (values: any) => {
 
         console.log("values", values)
+        navigateHandler(pageNavigatePathRoutes.dashboard);
 
         //     try {
         //         const res: any =
@@ -188,9 +186,9 @@ function LoginPage() {
 
                                     <Grid container spacing={1}>
                                         <Typography variant="caption" className="font-medium-14 text-white-color text-align-left">Email address*</Typography>
-                                        <Grid item xs={12} style={{ height: "47px", marginBottom: "10px" }}>
+                                        <Grid item xs={12} style={{ height: "47px", marginBottom: "10px", padding: "8px 0 0 0" }}>
                                             <TextField
-                                                className="username input-field"
+                                                className="username"
                                                 variant="outlined"
                                                 size="small"
                                                 value={values.email}
@@ -215,9 +213,9 @@ function LoginPage() {
                                         <Grid xs={12} className="flex-row align-left">
                                             <Typography variant="caption" className="font-medium-14 text-white-color text-align-left">Password*</Typography>
                                         </Grid>
-                                        <Grid xs={12} style={{ height: "47px", marginBottom: "10px" }}>
+                                        <Grid xs={12} style={{ height: "47px", marginBottom: "10px", padding: "8px 0 0 0" }}>
                                             <TextField
-                                                className="password input-field"
+                                                className="password"
                                                 type={password ? "text" : "password"}
                                                 variant="outlined"
                                                 size="small"
@@ -282,7 +280,8 @@ function LoginPage() {
                                             </p>
                                         </Stack>
                                         <Button
-                                            className="submit-button height-44px btn-border-0 primary-bg-color text-transform-capitalize border-radius-25px font-weight-600"
+                                            style={{ height: "47px", marginTop: "20px" }}
+                                            className="submit-button btn-border-0 primary-bg-color text-transform-capitalize border-radius-25 font-weight-600"
                                             variant="contained"
                                             type="submit"
                                             fullWidth
@@ -482,7 +481,7 @@ function LoginPage() {
                         />
                     )} */}
             </div>
-        </StyledLoginWrapper>
+        </StyledLoginWrapper >
     );
 };
 

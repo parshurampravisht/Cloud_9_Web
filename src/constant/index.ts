@@ -115,3 +115,8 @@ export const threeDotsHandler = (str: any, len = 25) => {
   }
   return str
 }
+
+export const pageNavigatePathRoutes = {
+  dashboard: '/dashboard',
+  settings: '/settings',
+}
