@@ -8,8 +8,9 @@ import { Bounce, ToastContainer } from 'react-toastify'
 import { createTheme, CssBaseline } from '@mui/material'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { SessionExpired } from './base'
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/club-management';
 import Layout from './components/layout';
+import ClubManagement from './components/club-management';
 
 
 
@@ -113,12 +114,11 @@ function App() {
       component: Dashboard,
       authType: "POST",
     },
-    // { path: "/service-user", component: ServiceUsers, authType: "POST" },
-    // {
-    //   path: "/service-user/individual-user-details/:authId",
-    //   component: IndividualUserDetails,
-    //   authType: "POST",
-    // },
+    {
+      path: "/club-Management",
+      component: ClubManagement,
+      authType: "POST",
+    },
     // {
     //   path: "/service-user/corporate-user-details/:authId",
     //   component: CorporateUserDetails,
@@ -147,11 +147,6 @@ function App() {
     // {
     //   path: "/corporate-management/corporate-dashboard/:corpId",
     //   component: CorporateDashboard,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/appointments",
-    //   component: Appointments,
     //   authType: "POST",
     // },
     // {

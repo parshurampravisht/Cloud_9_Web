@@ -21,11 +21,16 @@ import notification_active_icon from "./active_menu/notification.svg"
 import report_active_icon from "./active_menu/report.svg"
 import setting_active_icon from "./active_menu/setting.svg"
 import user_active_icon from "./active_menu/user.svg"
+import search_icon from "./search-icon.png"
 
 export const menuSidebarIcon = {
     dashboard: DashboardIcon,
     profileAvatarLogo: ProfileLogoIcon,
     ProfileLogo: ProfileLogo
+}
+
+export const Images = {
+    search_icon
 }
 
 export const sidebarMenu = {

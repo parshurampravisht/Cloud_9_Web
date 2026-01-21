@@ -2,23 +2,18 @@ import { useState } from "react";
 import {
   CssBaseline,
   Avatar,
-  IconButton,
   useTheme,
-  Menu,
-  MenuItem,
   Typography,
   Grid,
   Stack,
   // Select,
   // Box,
 } from "@mui/material";
-import { Settings, Notifications } from "@mui/icons-material";
 import SideBar from "../../base/SideBar";
 import { Wrapper } from "./style";
 import { useNavigate } from "react-router-dom";
 import { menuSidebarIcon, sidebarMenu } from "../../assets/images";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const userProfileDataSet = {
   profileImage: "https://mui.com/static/images/avatar/2.jpg",
   firstName: "Olivia",
@@ -27,8 +22,6 @@ const userProfileDataSet = {
 
 const Layout = ({ children }) => {
   const theme = useTheme();
-  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
-  // const [agentStatus, setAgentStatus] = useState<string>("Active");
   const [userProfile, setUserProfile] = useState({ ...userProfileDataSet });
 
   const { ProfileLogo } = menuSidebarIcon;
@@ -45,10 +38,6 @@ const Layout = ({ children }) => {
   //   (state) => state.globalAuthData.profileData
   // );
 
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
   const navigate = useNavigate();
 
   const handleCloseUserMenu = (item: any) => {
@@ -64,31 +53,20 @@ const Layout = ({ children }) => {
       if (password) localStorage.setItem("loginPassword", password);
       navigate("/login");
     }
-    setAnchorElUser(null);
   };
-  // const firstName = agentDetails?.basicDetails?.firstName
-  // const lastName = agentDetails?.basicDetails?.lastName
-
-  // console.log(">>", firstName);
-
-  // const handleStatusChange = (e: any) => {
-  //   const { value } = e.target;
-
-  //   setAgentStatus(value);
-  // };
 
   const sideNavWidth = `16rem`;
-  const rightSideNavWidth = `16.5rem`;
+  const rightSideNavWidth = `18rem`;
 
   return (
     <Wrapper theme={theme}>
       <CssBaseline />
-      <Grid className="navbar-container" container spacing={1}>
-        <Grid item xs={12} className="header">
+      <Grid className="navbar-container flex-row row-gap-12" container spacing={1}>
+        <Grid item xs={12} className="header" style={{ height: "57px" }}>
           <Grid
             container
-            style={{ height: "57px", background: "#000000", margin: "0px" }}
-            className="flex-row align-center justify-between width-100 margin-0px"
+            style={{ background: "#000000", margin: "0px" }}
+            className="flex-row align-center justify-between width-100 margin-0px height-100"
           >
             <Stack
               style={{ width: sideNavWidth, padding: "15px" }}
@@ -141,8 +119,7 @@ const Layout = ({ children }) => {
         </Grid>
         <Stack
           direction={"row"}
-          className="width-100"
-          style={{ columnGap: "7px" }}
+          className="width-100 align-start justify-between"
         >
           <Stack
             style={{ paddingTop: "0px", width: sideNavWidth, height: "86vh" }}
@@ -154,7 +131,7 @@ const Layout = ({ children }) => {
             style={{ width: `calc(100% - ${rightSideNavWidth})` }}
             className="flex-row column-gap-10"
           >
-            <div className="content">{children}</div>
+            <div className="content" style={{ margin: "0px" }}>{children}</div>
           </Stack>
         </Stack>
       </Grid>
