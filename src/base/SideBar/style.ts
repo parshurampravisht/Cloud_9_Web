@@ -4,7 +4,7 @@ export const SideBarContainer = styled.div`
   height: 100%;
   flex-grow: 1;
   overflow-y: auto;
-  padding: 8px 25px;
+  padding: 8px 20px;
   background: transparent;
   .MuiTreeItem-label {
     color: #ffffff !important;

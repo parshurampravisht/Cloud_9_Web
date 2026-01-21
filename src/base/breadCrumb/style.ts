@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const BreadcrumbContainer = styled.div`
   .breadcrumb-wrapper {
-    background: linear-gradient(
-        209.72deg,
-        rgba(18, 18, 18, 0) 38.97%,
-        #162d2e 52.32%,
-        #1a4d50 67.77%,
-        #00ff7d 84.49%
+    background-image: linear-gradient(
+        175.72deg,
+        rgba(18, 18, 18, 1),
+        rgba(22, 45, 46, 1),
+        rgba(26, 77, 80, 5),
+        rgba(0, 255, 125, 1)
       ),
-      linear-gradient(150.49deg, rgba(0, 0, 0, 0) 17.59%, #0066ff 101.95%);
+      linear-gradient(55.49deg, rgba(0, 0, 0, 0), rgba(0, 102, 255, 93));
     min-height: 100px;
     padding: 7px 14px;
     backdrop-filter: blur(16px);

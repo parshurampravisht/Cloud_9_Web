@@ -116,6 +116,7 @@
 .row-gap-15 {
   row-gap: 15px;
 }
+
 .row-gap-12 {
   row-gap: 12px;
 }
@@ -200,6 +201,10 @@
   border-radius: 25px !important;
 }
 
+.border-radius-22 {
+  border-radius: 22px !important;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -210,6 +215,10 @@
 
 .primary-text-color {
   color: #0064FF !important;
+}
+
+.secondary-db-text-color {
+  color: #DBDBDB !important;
 }
 
 .primary-bg-color {
@@ -275,6 +284,10 @@
 
 .font-medium-14 {
   font-size: 14px !important;
+}
+
+.font-medium-16 {
+  font-size: 16px !important;
 }
 
 .font-large-20 {

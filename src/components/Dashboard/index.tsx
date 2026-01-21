@@ -2,7 +2,7 @@ import ComingSoon from "../../base/ComingSoon";
 
 function Dashboard() {
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "0px" }}>
       <ComingSoon />
     </div>
   );

@@ -3,9 +3,15 @@
   margin: 0;
   text-align: center;
   width: 100%;
-  padding: 1rem;
+  padding: 0;
   height: 100vh;
   background-color: #000000;
+}
+
+.root-app-wrapper {
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -45,4 +51,20 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2B2B2B transparent;
+}
+
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
 }

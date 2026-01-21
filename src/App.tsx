@@ -8,9 +8,9 @@ import { Bounce, ToastContainer } from 'react-toastify'
 import { createTheme, CssBaseline } from '@mui/material'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import { SessionExpired } from './base'
-import Dashboard from './components/club-management';
 import Layout from './components/layout';
 import ClubManagement from './components/club-management';
+import Dashboard from './components/Dashboard';
 
 
 
@@ -236,7 +236,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className='root-app-wrapper'>
       <ThemeProvider theme={theme}>
         <ToastContainer
           position="top-right"
@@ -280,7 +280,7 @@ function App() {
         {/* <Loader showHide={loader} /> */}
         <SessionExpired open={sessionExpired} handleAction={handleAction} />
       </ThemeProvider>
-    </>
+    </div>
   )
 }
 

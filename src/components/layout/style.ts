@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  min-height: 100vh;
+  height :100%;
   .header {
     background: #000000;
     padding-top: 0px !important;
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     margin: 15px;
     // margin: 10px;
     overflow-y: auto;
-    height: 85vh;
+    height: 86vh;
   }
   .navbar-container .MuiGrid-item {
     // background: #131313;

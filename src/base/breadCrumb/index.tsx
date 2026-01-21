@@ -11,13 +11,13 @@ function BreadCrumb({
         <BreadcrumbContainer>
             <Card className="breadcrumb-wrapper border-radius-10 height-100 flex-col row-gap-10">
                 <Stack
-                    style={{ color: "#9C9C9C" }}
+                    style={{ color: "rgba(156, 156, 156, 1)" }}
                     direction={"row"}
                     className="flex-row align-center jusitfy-start font-small-12 font-weight-400 font-family-raleway width-100 column-gap-5"
                 >
                     {breadcrumb}
                     <Typography
-                        style={{ color: "#DBDBDB" }}
+                        style={{ color: "rgba(219, 219, 219, 1)" }}
                         variant="caption"
                         className="font-small-12 font-weight-400 font-family-raleway text-white-color"
                     >

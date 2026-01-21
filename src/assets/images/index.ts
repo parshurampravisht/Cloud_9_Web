@@ -22,6 +22,9 @@ import report_active_icon from "./active_menu/report.svg"
 import setting_active_icon from "./active_menu/setting.svg"
 import user_active_icon from "./active_menu/user.svg"
 import search_icon from "./search-icon.png"
+import arrow_down from "./arrow-down.png"
+import club_view from "./static_image/club-view.png"
+import location from "./location.svg"
 
 export const menuSidebarIcon = {
     dashboard: DashboardIcon,
@@ -30,7 +33,10 @@ export const menuSidebarIcon = {
 }
 
 export const Images = {
-    search_icon
+    search_icon,
+    club_view,
+    location,
+    arrow_down
 }
 
 export const sidebarMenu = {
