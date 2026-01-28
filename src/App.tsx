@@ -11,6 +11,7 @@ import { SessionExpired } from './base'
 import Layout from './components/layout';
 import ClubManagement from './components/club-management';
 import Dashboard from './components/Dashboard';
+import ClubManagementEditor from './components/club-management/ClubManagementEditor';
 
 
 
@@ -115,15 +116,15 @@ function App() {
       authType: "POST",
     },
     {
-      path: "/club-Management",
+      path: "/club-management",
       component: ClubManagement,
       authType: "POST",
     },
-    // {
-    //   path: "/service-user/corporate-user-details/:authId",
-    //   component: CorporateUserDetails,
-    //   authType: "POST",
-    // },
+    {
+      path: "/club-management/new",
+      component: ClubManagementEditor,
+      authType: "POST",
+    },
     // {
     //   path: "/service-user/wema-service-user-details/:authId",
     //   component: WemaServiceUsersDashboard,
@@ -160,58 +161,6 @@ function App() {
     //   component: Tickets,
     //   authType: "POST",
     //   navigator: "/tickets",
-    // },
-    // {
-    //   path: "/settings",
-    //   component: Settings,
-    //   authType: "POST",
-    //   navigator: "/settings",
-    // },
-    // {
-    //   path: "/notifications",
-    //   component: Notifications,
-    //   authType: "POST",
-    //   navigator: "/notifications",
-    // },
-    // {
-    //   path: "/tasks",
-    //   component: Tasks,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/complaints",
-    //   component: Complaints,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/manage-card",
-    //   component: ManageCard,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/service-providers",
-    //   component: ServiceProviders,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/reports",
-    //   component: Reports,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/service-management",
-    //   component: ServiceManagement,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/resources",
-    //   component: Resources,
-    //   authType: "POST",
-    // },
-    // {
-    //   path: "/chats",
-    //   component: Chats,
-    //   authType: "POST",
     // },
     { path: "/", component: LoginPage, authType: "PRE", isIndex: true },
   ];

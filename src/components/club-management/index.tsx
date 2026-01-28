@@ -1,9 +1,14 @@
 import { Button, Stack, Typography } from "@mui/material";
 import BreadCrumb from "../../base/breadCrumb";
 import { Images } from "../../assets/images";
+import { pageNavigatePathRoutes } from "../../constant";
+import { useNavigate } from "react-router-dom";
+import type { BreadcrumbItem } from "../../constant/typeSchema";
 
 function ClubManagement() {
   const { search_icon, club_view, location, arrow_down } = Images;
+
+  const navigate = useNavigate()
 
   const clubList = [
     {
@@ -57,11 +62,19 @@ function ClubManagement() {
     },
   ];
 
+  const navigatorHanlder = () => {
+    navigate(pageNavigatePathRoutes.club_management_new)
+  }
+
+  const breadcrumbs: BreadcrumbItem[] = [
+    { label: "Overview" },
+    { label: "Club Management" },
+  ];
+
   return (
     <div className="flex-col row-gap-20">
       <BreadCrumb
-        breadcrumb={"Account"}
-        activeBreadCrumbTab={"Club Management"}
+        breadcrumbs={breadcrumbs}
         title={"Club Management"}
         description={" Manage all pool and billiards tables"}
       />
@@ -78,6 +91,7 @@ function ClubManagement() {
           Search tables...
         </Stack>
         <Button
+          onClick={() => navigatorHanlder()}
           style={{ padding: "8px 15px", width: "14rem", color: "#ffffff" }}
           className="primary-bg-color text-white-color text-transform-capitalize border-radius-10"
         >

@@ -28,6 +28,10 @@
   flex-direction: row;
 }
 
+.grid-row {
+  display: grid !important;
+}
+
 .flex-col {
   display: flex;
   flex-direction: column;
@@ -71,6 +75,10 @@
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
 }
 
 .width-100 {

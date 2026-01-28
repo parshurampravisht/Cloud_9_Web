@@ -1,3 +1,5 @@
+import { Navigate } from "react-router-dom";
+
 export const base_url = "https://maia.wyizer.com/";
 // export const base_url = "http://103.174.102.93:8085/";
 // export const base_url = "http://192.168.1.36:8080/";
@@ -61,6 +63,8 @@ export function convertStringNumbersToNumbers<T extends Record<string, any>>(
   return result;
 }
 
+export const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 export function isValidEmail(email: string) {
   if (!email?.trim()) return false;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -119,4 +123,5 @@ export const threeDotsHandler = (str: any, len = 25) => {
 export const pageNavigatePathRoutes = {
   dashboard: '/dashboard',
   settings: '/settings',
+  club_management_new: "/club-management/new"
 }
